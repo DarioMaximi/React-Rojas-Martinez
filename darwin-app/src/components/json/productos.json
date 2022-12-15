@@ -1,0 +1,7 @@
+[
+    {"id":1, "nombre":"Base de Datos Power", "descripcion":"La mejor base de datos de tu vida, para crear campañas de E-mail marketing", "imagen":"images/baseDeDatos.png", "precio": 3500, "stock": 100, "categoria": "archivos"},
+    {"id":2, "nombre":"Lleva tu negocio al proximo nivel", "descripcion":"Si te quedaste afuera del curso que hicieron más de 100 personas en Octubre. Esta es tú oportunidad.", "imagen":"images/llevatunegocio.png",
+      "precio": 4500, "stock": 50, "categoria": "cursos"},
+    {"id":3, "nombre":"De Emprendedora a Empresaria 1", "descripcion":"Subi de nivel con este curso virtual de 8 clases", "imagen":"images/empAempresaria.png", "precio": 4800, "stock": 30, "categoria": "cursos"},
+    {"id":4, "nombre":"De Emprendedora a Empresaria 2", "descripcion":"Segui capacitandote y descubrí nuevas herramientas para ser una empresaria exitosa", "imagen":"images/empEmpresaria1.png", "precio": 5000, "stock": 30, "categoria": "cursos"}
+]
