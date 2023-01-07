@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import arrayProductos from "./json/productos.json";
-import ItemCount from "./ItemCount";
 import ItemList from "./itemList";
 import { useParams } from "react-router-dom";
 
@@ -25,7 +24,6 @@ const ItemListContainer = () => {
     return (
         <div className="container">
             <ItemList items={items} />
-            <ItemCount stock={15} />
         </div>
     )
 }
