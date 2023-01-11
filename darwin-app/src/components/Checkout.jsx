@@ -1,4 +1,4 @@
-import { addDoc, doc, collection, getFirestore, updateDoc } from "firebase/firestore";
+import { addDoc, doc, collection, getFirestore, updateDoc, WriteBatch, writeBatch } from "firebase/firestore";
 import React, { useContext, useState } from "react";
 import { CartContext } from "./context/CartContext";
 
@@ -24,6 +24,10 @@ const Checkout = () => {
             setOrderId(snapShot.id);
             const generateOrder = doc(db, "orders", snapShot.id);
             updateDoc(generateOrder, {total:order.total * 1.21});
+            const updatedOrder = doc(db, "orders", snapShot.id);
+            const batch = writeBatch(db);
+            batch.set(updatedOrder, {...order, cost_price:sumaTotal()*.65});
+            batch.commit();
             clear();
         });
     }
