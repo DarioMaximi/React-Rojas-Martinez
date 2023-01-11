@@ -1,4 +1,4 @@
-import { addDoc, doc, collection, getFirestore, updateDoc, WriteBatch, writeBatch } from "firebase/firestore";
+import { addDoc, doc, collection, getFirestore, updateDoc, writeBatch } from "firebase/firestore";
 import React, { useContext, useState } from "react";
 import { CartContext } from "./context/CartContext";
 
@@ -39,15 +39,19 @@ const Checkout = () => {
                 <form>
                     <div className="mb-3">
                         <label for="nombre" className="form-label">Nombre:</label>
-                        <input type="text" className="form-control" placeholder="Ingrese su nombre" onInput={(e) => {setNombre(e.target.value)}}/>
+                        <input type="text" className="form-control" placeholder="Vani Brand" onInput={(e) => {setNombre(e.target.value)}}/>
                     </div>
                     <div className="mb-3">
                         <label for="telefono" className="form-label">Telefono:</label>
-                        <input type="text" className="form-control" placeholder="Ingrese su número telefónico" onInput={(e) => {setTelefono(e.target.value)}}/>
+                        <input type="text" className="form-control" placeholder="(+549)123456789" onInput={(e) => {setTelefono(e.target.value)}}/>
                     </div>
                     <div className="mb-3">
                         <label for="email" className="form-label">Email:</label>
-                        <input type="text" className="form-control" placeholder="Ingrese su Email" onInput={(e) => {setEmail(e.target.value)}}/>
+                        <input type="text" className="form-control" placeholder="Ejemplo@mail.com" onInput={(e) => {setEmail(e.target.value)}}/>
+                    </div>
+                    <div className="mb-3">
+                        <label for="email" className="form-label">Confirmar Email:</label>
+                        <input type="text" className="form-control" placeholder="Ejemplo@mail.com" onInput={(e) => {setEmail(e.target.value)}}/>
                     </div>
                     <button type="button" className="btn btn-warning" onClick={generarOrden}>Hacer el pedido</button>
                 </form>
